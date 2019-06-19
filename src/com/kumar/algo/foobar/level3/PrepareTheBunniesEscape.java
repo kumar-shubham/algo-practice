@@ -1,3 +1,5 @@
+package com.kumar.algo.foobar.level3;
+
 /*
 Prepare the Bunnies' Escape
         ===========================

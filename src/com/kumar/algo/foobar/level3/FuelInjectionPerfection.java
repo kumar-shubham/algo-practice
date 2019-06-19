@@ -1,3 +1,5 @@
+package com.kumar.algo.foobar.level3;
+
 import java.math.BigInteger;
 
 public class FuelInjectionPerfection {
@@ -14,17 +16,17 @@ public class FuelInjectionPerfection {
         BigInteger num = new BigInteger(x);
         int count = 0;
         while(num.compareTo(BigInteger.ONE) > 0){
-            num = num.divide(BigInteger.TWO);
+            num = num.divide(BigInteger.valueOf(2));
             count++;
         }
 
 //        System.out.println(count);
 
-        if(BigInteger.TWO.pow(count).compareTo(number) == 0){
+        if(BigInteger.valueOf(2).pow(count).compareTo(number) == 0){
             return count;
         }
-        BigInteger bigger = BigInteger.TWO.pow(++count);
-        BigInteger smaller = bigger.divide(BigInteger.TWO);
+        BigInteger bigger = BigInteger.valueOf(2).pow(++count);
+        BigInteger smaller = bigger.divide(BigInteger.valueOf(2));
 
 //        System.out.println(bigger);
 //        System.out.println(smaller);

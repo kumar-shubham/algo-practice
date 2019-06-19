@@ -1,0 +1,21 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+# Java Files
+*.class
+*.jar
+
+# IntelliJ Files
+.idea/
+*.iml
+*.iws
+
+# Maven Files
+target/
+log/
+*.log
+dependency-reduced-pom.xml
+
+# Eclipse Files
+.classpath
+.project
+.settings/
+

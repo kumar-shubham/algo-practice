@@ -1,4 +1,4 @@
-import java.util.Map;
+package com.kumar.algo.foobar.level4;
 
 public class BringingAGunToAGuradFight {
 
