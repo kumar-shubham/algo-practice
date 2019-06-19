@@ -7,15 +7,33 @@ public class BringingAGunToAGuradFight {
 
     public static void main(String[] args) {
 
-        int[] dimension = {3,2};
-        int[] yp = {1,1};
-        int[] gp = {2,1};
-        int distance = 10000;
+//        int[] dimension = {3,2};
+//        int[] yp = {1,1};
+//        int[] gp = {2,1};
+//        int distance = 10000;
 
 //        int[] dimension = {300,275};
 //        int[] yp = {150,150};
 //        int[] gp = {185,100};
 //        int distance = 500;
+
+//        int[] dimension = {2,5};
+//        int[] yp = {1,2};
+//        int[] gp = {1,4};
+//        int distance = 11;
+        //expected answer: 27
+
+//        int[] dimension = {23,10};
+//        int[] yp = {6,4};
+//        int[] gp = {3,2};
+//        int distance = 23;
+//        //expected answer: 8
+
+        int[] dimension = {10,10};
+        int[] yp = {4,4};
+        int[] gp = {3,3};
+        int distance = 5000;
+        //expected answer: 739323
 
         long start = System.currentTimeMillis();
 
@@ -95,6 +113,14 @@ public class BringingAGunToAGuradFight {
 
         }
 
+//        System.out.println(heros);
+//        System.out.println(villains);
+//        System.out.println(corners);
+
+        System.out.println(heros.size());
+        System.out.println(villains.size());
+        System.out.println(corners.size());
+
         int count = villains.size();
 
         for(Map.Entry<String, Double> entry : villains.entrySet()){
@@ -103,7 +129,8 @@ public class BringingAGunToAGuradFight {
 
             if(heros.containsKey(slope) && heros.get(slope) <= d){
                 count--;
-            }else if(corners.containsKey(slope) && corners.get(slope) <= d){
+            }
+            if(corners.containsKey(slope) && corners.get(slope) <= d){
                 count--;
             }
         }
@@ -141,6 +168,15 @@ public class BringingAGunToAGuradFight {
 
         xDiff = xDiff/gcd;
         yDiff = yDiff/gcd;
+
+        if(xDiff < 0 && yDiff < 0){
+            xDiff = Math.abs(xDiff);
+            yDiff = Math.abs(yDiff);
+        }
+        else if((xDiff < 0 && yDiff > 0) || (xDiff > 0 && yDiff < 0)){
+            xDiff = Math.abs(xDiff);
+            yDiff = -1 * Math.abs(yDiff);
+        }
 
         return yDiff + "/" + xDiff;
 
