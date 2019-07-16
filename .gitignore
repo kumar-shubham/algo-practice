@@ -4,8 +4,6 @@
 *.jar
 
 # IntelliJ Files
-.idea/
-*.iml
 *.iws
 
 # Maven Files
@@ -18,4 +16,5 @@ dependency-reduced-pom.xml
 .classpath
 .project
 .settings/
+out/
 

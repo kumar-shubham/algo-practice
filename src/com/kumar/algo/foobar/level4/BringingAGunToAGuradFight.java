@@ -1,7 +1,8 @@
 package com.kumar.algo.foobar.level4;
 
-import java.util.HashMap;
+import javax.swing.*;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class BringingAGunToAGuradFight {
 
@@ -30,9 +31,9 @@ public class BringingAGunToAGuradFight {
 //        //expected answer: 8
 
         int[] dimension = {10,10};
-        int[] yp = {4,4};
+        int[] yp = {3,4};
         int[] gp = {3,3};
-        int distance = 5000;
+        int distance = 1;
         //expected answer: 739323
 
         long start = System.currentTimeMillis();
@@ -50,12 +51,12 @@ public class BringingAGunToAGuradFight {
 
     public static int solution(int[] dimensions, int[] your_position, int[] guard_position, int distance) {
 
-         Map<String, Double> heros = new HashMap<>();
-         Map<String, Double> villains = new HashMap<>();
-         Map<String, Double> corners = new HashMap<>();
+         Map<String, Double> heros = new TreeMap<>();
+         Map<String, Double> villains = new TreeMap<>();
+         Map<String, Double> corners = new TreeMap<>();
 
-        int xDim = distance / dimensions[0];
-        int yDim = distance / dimensions[1];
+        int xDim = (distance / dimensions[0]);
+        int yDim = (distance / dimensions[1]) ;
 
         Point hero = new Point();
         hero.x = your_position[0];
@@ -64,6 +65,9 @@ public class BringingAGunToAGuradFight {
         villain.x = guard_position[0];
         villain.y = guard_position[1];
 
+        int duplicateVillains = 0;
+        int outsideVillains = 0;
+
         for(int i = -yDim; i<= yDim; i++){
 
             for(int j = -xDim; j<= xDim; j++){
@@ -71,22 +75,26 @@ public class BringingAGunToAGuradFight {
 //                System.out.println("Getting box for xDim: " + j + " and yDim: " + i);
 
                 Box box = getBox(j, i, dimensions, your_position, guard_position);
-//                System.out.println(box);
-//                System.out.println();
+                System.out.println(box);
+                System.out.println();
 
                 double d = getDistance(hero, box.villain);
 
-                if(d < distance){
+                if(d <= distance){
 
                     String villainSlope = getSlope(box.villain, hero);
 
                     if(villains.containsKey(villainSlope)){
                         if(villains.get(villainSlope) > d){
                             villains.put(villainSlope, d);
+//                            System.out.println("villain : " + box.villain + ", slope: " + villainSlope);
                         }
+                        duplicateVillains++;
                     }
                     else{
                         villains.put(villainSlope, d);
+//                        System.out.println("villain1 : " + box.villain + ", slope: " + villainSlope);
+
                     }
 
 
@@ -108,6 +116,9 @@ public class BringingAGunToAGuradFight {
                     addCorner(box.corner3, hero, corners);
                     addCorner(box.corner4, hero, corners);
                 }
+                else{
+                    outsideVillains++;
+                }
 
             }
 
@@ -117,9 +128,12 @@ public class BringingAGunToAGuradFight {
 //        System.out.println(villains);
 //        System.out.println(corners);
 
-        System.out.println(heros.size());
-        System.out.println(villains.size());
-        System.out.println(corners.size());
+//        System.out.println(heros.size());
+//        System.out.println(villains.size());
+//        System.out.println(corners.size());
+
+//        System.out.println("duplicate villains: " + duplicateVillains);
+//        System.out.println("outside villains: " + outsideVillains);
 
         int count = villains.size();
 
@@ -128,9 +142,11 @@ public class BringingAGunToAGuradFight {
             Double d = entry.getValue();
 
             if(heros.containsKey(slope) && heros.get(slope) <= d){
+//                System.out.println("common slope in heros: " + slope);
                 count--;
             }
-            if(corners.containsKey(slope) && corners.get(slope) <= d){
+            else if(corners.containsKey(slope) && corners.get(slope) <= d){
+//                System.out.println("common slope in corners: " + slope);
                 count--;
             }
         }
@@ -168,15 +184,6 @@ public class BringingAGunToAGuradFight {
 
         xDiff = xDiff/gcd;
         yDiff = yDiff/gcd;
-
-        if(xDiff < 0 && yDiff < 0){
-            xDiff = Math.abs(xDiff);
-            yDiff = Math.abs(yDiff);
-        }
-        else if((xDiff < 0 && yDiff > 0) || (xDiff > 0 && yDiff < 0)){
-            xDiff = Math.abs(xDiff);
-            yDiff = -1 * Math.abs(yDiff);
-        }
 
         return yDiff + "/" + xDiff;
 
@@ -242,7 +249,7 @@ public class BringingAGunToAGuradFight {
             box.villain.x = xMul + guard_position[0];
         }
 
-        if((j & 1) == 0 && j != 0){
+        if((j & 1) != 0 && j != 0){
             box.hero.y = yMul + (dimensions[1] - your_position[1]);
             box.villain.y = yMul + (dimensions[1] - guard_position[1]);
         }
@@ -329,7 +336,7 @@ public class BringingAGunToAGuradFight {
     }
 }
 
-class Box{
+ class Box{
 
     Point hero;
     Point villain;
