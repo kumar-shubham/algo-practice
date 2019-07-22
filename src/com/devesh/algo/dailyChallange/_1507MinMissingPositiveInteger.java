@@ -21,7 +21,7 @@ public class _1507MinMissingPositiveInteger {
             }
             item = Math.abs(item);
 
-            if(item > 0 && item <= arr.length){
+            if(item > 0 && item <= arr.length && arr[item-1] > 0){
                 arr[item-1] = arr[item-1]*-1;
             }
         }
@@ -48,7 +48,7 @@ public class _1507MinMissingPositiveInteger {
 
 
     public static void main(String ar[]){
-        int [] arr = {3, 4, -1, 1};
+        int [] arr = {1,2,3,3,2,1};
 //        int [] arr = {1,2, 0};
 //        int [] arr = {1, 2, 3, 4, 6};
         int res = getMinimumPositiveMissingInteger(arr);
