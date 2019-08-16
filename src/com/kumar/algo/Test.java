@@ -4,14 +4,13 @@ public class Test {
 
     public static void main(String[] args) {
 
-        A c = new A();
-        System.out.println(c.a);
-        System.out.println(c.b);
+        char c = '3';
+        System.out.println(c);
+        int a = 3;
+        char b = (3 + '0');
+        System.out.println(b);
+
     }
 
-    static class A{
-        Boolean a;
-        boolean b;
-    }
 }
 
