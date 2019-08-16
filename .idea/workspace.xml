@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f8d3716-0a1c-4e40-8522-46b35d007d05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/kumar/algo/leetcode/SolveSudoku.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kumar/algo/leetcode/UniquePathsIII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/kumar/algo/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/kumar/algo/Test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,20 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UniquePathsIII">
-    <configuration name="Regex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.Regex" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kumar.algo.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.UniquePathsII">
     <configuration name="SolveSudoku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kumar.algo.leetcode.SolveSudoku" />
       <module name="algorithm" />
@@ -83,6 +67,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.kumar.algo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UniquePathsII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.leetcode.UniquePathsII" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kumar.algo.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UniquePathsII" />
         <item itemvalue="Application.UniquePathsIII" />
         <item itemvalue="Application.SolveSudoku" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.ValidSudoku" />
-        <item itemvalue="Application.Regex" />
       </list>
     </recent_temporary>
   </component>
