@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f8d3716-0a1c-4e40-8522-46b35d007d05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/devesh/algo/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/devesh/algo/Test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,9 +48,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UniquePathsII">
-    <configuration name="SolveSudoku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.leetcode.SolveSudoku" />
+  <component name="RunManager" selected="Application.ThreeSum">
+    <configuration name="LongestSubstringWithoutRepeatingCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.leetcode.LongestSubstringWithoutRepeatingCharacters" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
@@ -61,12 +62,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.Test" />
+    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.devesh.algo.Test" />
       <module name="algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.kumar.algo.*" />
+          <option name="PATTERN" value="com.devesh.algo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.leetcode.ThreeSum" />
+      <module name="algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kumar.algo.leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,26 +114,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidSudoku" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kumar.algo.leetcode.ValidSudoku" />
-      <module name="algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kumar.algo.leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreeSum" />
+        <item itemvalue="Application.LongestSubstringWithoutRepeatingCharacters" />
+        <item itemvalue="Application.Test (1)" />
         <item itemvalue="Application.UniquePathsII" />
         <item itemvalue="Application.UniquePathsIII" />
-        <item itemvalue="Application.SolveSudoku" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.ValidSudoku" />
       </list>
     </recent_temporary>
   </component>
